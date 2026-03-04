@@ -1,58 +1,222 @@
-<!DOCTYPE html>
-<nav class="nav">
-  <div class="logo">TEGOS</div>
-  <ul class="nav-links">
-    <li><a href="index.html">Home</a></li>
-    <li><a href="gallery.html">Gallery</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="news.html">News</a></li>
-    <li><a href="contact.html">Contacts</a></li>
-    
-  </ul>
-</nav>
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-<!--CONTACT -->
-<link rel="stylesheet" href="style.css">
- <section id="contact" class="contact">
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Ednas School</title>
-</head>
-<body>
+body {
+  font-family: "Georgia", serif;
+  background-color: #f6f3eb;
+  color: grey;
 
-<main class="contact-text">
-  <h1>Contact Page</h1>
-  <p>Where you can call to enroll!</p>
-  
-  <div class="contact-grid">
-    <div class="contacts">  <p> Facebook page: 
-     <li> 
-       <a href="url">https://www.facebook.com/ednasschool/ 
-       </a> </li>
-      
-       Our Number:
-      <li>Call us! (075) 522 3572
-       </p>
-      
-    </div>
-    
-    <div class="contact-grid">
-    <div class="contacts"> <p> Located in:
-      <li> San Carlos City
-        <li> Alaminos City 
-          <li> Dagupan City</p>
-      </div>
-    
-      
-        
-</main>
-  </section>
-  
-<footer class="footer">
-  <p>© TEGOS 2026</p>
-  </footer>
+/* HERO */
+.hero {
+  height: 115vh;
+  background: url("https://i.ytimg.com/vi/_HQgR8i_A10/maxresdefault.jpg") center/cover no-repeat;
+  position: relative;
+  color:white;
+}
 
-</body>
-</html>
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+}
+
+.nav {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+}
+
+.logo {
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: grey;
+  font-size: 14px;
+}
+
+
+
+/* HERO CONTENT */
+.hero-content {
+  position: relative;
+  z-index: 1;
+  height: calc(100vh - 80px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h1 {
+  font-size: 64px;
+  letter-spacing: 4px;
+}
+
+.hero-content p {
+  margin: 10px 0 30px;
+  font-style: italic;
+}
+
+.btn-primary {
+  padding: 14px 32px;
+  background: #ffffff;
+  border: none;
+  border-radius: 30px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+/* ABOUT */
+.about {
+  padding: 150px 60px;
+  text-align: center;
+  background: #C9980B
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: white
+}
+
+.about-text {
+  max-width: 700px;
+  margin: 0 auto 50px;
+  color: white
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 50px;
+}
+
+.card {
+  background: white;
+  border-radius: 50px;
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 360px;
+  object-fit: cover;
+}
+
+.card h3 {
+  padding: 20px;
+}
+
+/* FEATURES */
+.features {
+  background: #2f4f1f;
+  color: white;
+  padding: 150px 60px;
+  text-align: center;
+}
+
+.features h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 50px;
+}
+
+.feature {
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 17px;
+}
+
+
+/* NEWS */
+.news {
+  color: white;
+  padding: 130px 60px;
+  text-align: center;
+  background: #023E7D
+}
+
+.news-text {
+  color: white;
+  margin-bottom: 40px;
+}
+
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 30px;
+  border-radius: 20px;
+  font-size: 16px;
+}
+
+.news-card {
+  border-radius: 20px;
+  padding: 30px;
+  text-align: left;
+}
+
+.news-card span {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+/* CONTACT */
+ .contact {
+  background: #2f4f1f;
+  color: white;
+  padding: 130px 60px;
+  text-align: center;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 50px;
+}
+
+.contacts {
+  border: 1px solid rgba(255,255,255,0.3);
+  padding: 30px;
+  border-radius: 10px;
+  font-size: 17px;
+  margin-top: 50px;
+}
+
+
+
+
+
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 30px;
+  background: #1f2d16;
+  color: white;
+font-size: 14px;
+}
